@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import { withUt } from 'uploadthing/tw';
+import plugin from 'tailwindcss/plugin'
 
 module.exports = withUt({
   darkMode: ['class'],
@@ -94,5 +95,26 @@ module.exports = withUt({
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'),
+		// plugin(({ addUtilities }) => {
+		// 	addUtilities({
+		// 		// flex
+		// 		'.flex-center': {
+		// 			display: 'flex',
+		// 			justifyContent: 'center',
+		// 			alignItems: 'center',
+		// 		},
+		// 		'.flex-between': {
+		// 			display: 'flex',
+		// 			justifyContent: 'space-between',
+		// 			alignItems: 'center',
+		// 		},
+		// 		'.flex-end': {
+		// 			display: 'flex',
+		// 			justifyContent: 'flex-end',
+		// 			alignItems: 'center',
+		// 		},
+		// 	})
+		// }),
+	],
 });
