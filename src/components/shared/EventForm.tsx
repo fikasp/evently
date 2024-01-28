@@ -237,7 +237,7 @@ export default function EventForm({
 											onChange={(date: Date) => field.onChange(date)}
 											showTimeSelect
 											timeInputLabel="Time:"
-											dateFormat="MM/dd/yyyy h:mm aa"
+											dateFormat="yyyy-MM-dd hh:mm"
 											wrapperClassName="datePicker"
 										/>
 									</div>
@@ -269,7 +269,7 @@ export default function EventForm({
 											onChange={(date: Date) => field.onChange(date)}
 											showTimeSelect
 											timeInputLabel="Time:"
-											dateFormat="MM/dd/yyyy h:mm aa"
+											dateFormat="yyyy-MM-dd hh:mm"
 											wrapperClassName="datePicker"
 										/>
 									</div>

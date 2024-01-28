@@ -1,5 +1,5 @@
-import EventForm from '@/components/shared/EventForm'
 import { auth } from '@clerk/nextjs'
+import EventForm from '@/components/shared/EventForm'
 
 export default function CreateEvent() {
 	const { sessionClaims } = auth()

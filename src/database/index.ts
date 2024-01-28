@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 
 const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_DB = process.env.MONGODB_DB
 
 let cached = (global as any).mongoose || { conn: null, promise: null }
 
@@ -12,7 +13,7 @@ export const connectToDatabase = async () => {
 	cached.promise =
 		cached.promise ||
 		mongoose.connect(MONGODB_URI, {
-			dbName: 'evently',
+			dbName: MONGODB_DB,
 			bufferCommands: false,
 		})
 
