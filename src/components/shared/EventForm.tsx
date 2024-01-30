@@ -26,6 +26,9 @@ import { eventDefaultValues } from '@/constants'
 import { createEvent, updateEvent } from '@/actions/event.actions'
 import { IEvent } from '@/database/models/event.model'
 import { FileUploader } from './FileUploader'
+import { registerLocale, setDefaultLocale } from  "react-datepicker";
+import pl from 'date-fns/locale/pl';
+registerLocale('pl', pl)
 
 type EventFormProps = {
 	userId: string
@@ -237,15 +240,16 @@ export default function EventForm({
 											onChange={(date: Date) => field.onChange(date)}
 											showTimeSelect
 											timeInputLabel="Time:"
-											dateFormat="yyyy-MM-dd hh:mm"
+											dateFormat="yyyy-MM-dd HH:mm"
 											wrapperClassName="datePicker"
+											locale="pl"
 										/>
 									</div>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}
-					/>
+					/>	
 
 					<FormField
 						control={form.control}
@@ -269,15 +273,16 @@ export default function EventForm({
 											onChange={(date: Date) => field.onChange(date)}
 											showTimeSelect
 											timeInputLabel="Time:"
-											dateFormat="yyyy-MM-dd hh:mm"
+											dateFormat="yyyy-MM-dd HH:mm"
 											wrapperClassName="datePicker"
+											locale="pl"
 										/>
 									</div>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}
-					/>
+					/>		
 				</div>
 
 				<div className="flex flex-col gap-5 md:flex-row">

@@ -26,7 +26,10 @@ const populateEvent = (query: any) => {
 			model: User,
 			select: '_id firstName lastName',
 		})
-		.populate({ path: 'category', model: Category, select: '_id name' })
+		.populate({ 
+			path: 'category', 
+			model: Category, 
+			select: '_id name' })
 }
 
 // CREATE
@@ -35,7 +38,7 @@ export async function createEvent({ userId, event, path }: CreateEventParams) {
 		await connectToDatabase()
 
 		const organizer = await User.findById(userId)
-		
+
 		if (!organizer) throw new Error('Organizer not found')
 
 		const newEvent = await Event.create({
