@@ -45,8 +45,8 @@ export default function Card({ event, hasOrderLink, hidePrice }: CardProps) {
 			<div className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4">
 				{!hidePrice && (
 					<div className="flex gap-2">
-						<span className="p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-green-60">
-							{event.isFree ? 'FREE' : `$${event.price}`}
+						<span className="p-semibold-14 rounded-full bg-green-100 px-4 py-1 text-green-60">
+							{event.isFree ? 'FREE' : `${event.price} zł`}
 						</span>
 						<p className="p-semibold-14 w-min rounded-full bg-grey-500/10 px-4 py-1 text-grey-500 line-clamp-1">
 							{event.category.name}
