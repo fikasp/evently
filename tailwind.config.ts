@@ -97,25 +97,25 @@ module.exports = withUt({
 	},
 	plugins: [
 		require('tailwindcss-animate'),
-		// plugin(({ addUtilities }) => {
-		// 	addUtilities({
-		// 		// flex
-		// 		'.flex-center': {
-		// 			display: 'flex',
-		// 			justifyContent: 'center',
-		// 			alignItems: 'center',
-		// 		},
-		// 		'.flex-between': {
-		// 			display: 'flex',
-		// 			justifyContent: 'space-between',
-		// 			alignItems: 'center',
-		// 		},
-		// 		'.flex-end': {
-		// 			display: 'flex',
-		// 			justifyContent: 'flex-end',
-		// 			alignItems: 'center',
-		// 		},
-		// 	})
-		// }),
+		plugin(({ addUtilities }) => {
+			addUtilities({
+				// flex
+				'.flex-center': {
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+				},
+				'.flex-between': {
+					display: 'flex',
+					justifyContent: 'space-between',
+					alignItems: 'center',
+				},
+				'.flex-end': {
+					display: 'flex',
+					justifyContent: 'flex-end',
+					alignItems: 'center',
+				},
+			})
+		}),
 	],
 })
